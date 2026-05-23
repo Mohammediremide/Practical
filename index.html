@@ -12,22 +12,21 @@
 </head>
 
 <body >
-    <section class="bg-cover bg-center h-screen" style="background-image: url('./hero.jpg');">
-<nav class="flex items-center justify-between p-5 text-white">
+    <section id="hero" class="bg-cover bg-center h-screen" style="background-image: url('./hero.jpg');">
+<nav class="flex items-center justify-between p-5 fixed top-0 w-full backdrop-blur-sm text-white">
         <p class="font-black">ABRESTUARANT</p>
         <div class="flex items-center gap-4">
          <div class="mr-8 flex items-center gap-4">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">Contact</a>
-            <a href="#">About</a>
-            <a href="#">Register</a>
-            <a href="#">Login</a>
+            <a href="#hero">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#specialties">Specialties</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
          </div>
             <div>
-                <span><i class="fa-brands fa-instagram"></i></span>
-                <span><i class="fa-brands fa-facebook"></i></span>
-                <span><i class="fa-brands fa-twitter"></i></span>
+                <span><i href="" class="fa-brands fa-instagram"></i></span>
+                <span><i href="#" class="fa-brands fa-facebook"></i></span>
+                <span><i href="#" class="fa-brands fa-twitter"></i></span>
             </div>
         </div>
 
@@ -35,12 +34,12 @@
     <div class="flex flex-col items-center justify-center h-screen text-white">
         <h1 class="text-6xl font-bold mb-4">Welcome to ABRESTAURANT</h1>
         <p class="text-lg mb-8">Experience the best dining in town with us!</p>
-        <a href="#" class="px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition">Explore Menu</a>
+        <a href="#menu" class="px-6 py-3 bg-red-600 text-white rounded hover:bg-red-700 transition">Explore Menu</a>
     </div>
-    
+
     </section>
     
-    <section class="flex items-center justify-center h-screen mt-20 text-black">
+    <section id="specialties" class="flex items-center justify-center h-screen mt-20 text-black">
         <div class="max-w-4xl text-center">
             <h2 class="text-4xl font-bold mb-4">Our Specialties</h2>
             <p class="text-lg mb-8">Discover our delicious dishes crafted with the finest ingredients.</p>
@@ -71,6 +70,420 @@
         </div>
 
     </section>
+   <section id="menu" class="bg-white py-16 px-8 text-center">
+
+    <!-- Title -->
+    <p class="text-3xl font-bold uppercase mb-12">
+        Menu
+    </p>
+
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+    <!-- Menu Items -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Item 1 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (2).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Grilled Salmon
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Freshly grilled salmon served with healthy vegetables and herbs.
+            </p>
+
+            <span class="font-bold text-lg">
+                $18
+            </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./download (1).jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Cheese Pizza
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Crispy crust pizza topped with rich tomato sauce and mozzarella.
+            </p>
+
+            <span class="font-bold text-lg">
+                $14
+            </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shadow-lg rounded-lg p-6">
+            <img src="./🍖🥔 Carne asada con papas doradas ✨.jpg"
+                 class="w-full h-52 object-cover rounded-lg mb-5">
+
+            <h2 class="text-xl font-bold mb-3">
+                Classic Burger
+            </h2>
+
+            <p class="text-gray-600 text-sm leading-6 mb-4">
+                Juicy beef burger served with fries and fresh vegetables.
+            </p>
+
+            <span class="font-bold text-lg">
+                $12
+            </span>
+        </div>
+
+    </div>
+</section>
 <footer class="bg-[#111111] text-white px-8 py-12">
   <h1 class="text-3xl font-bold uppercase mb-10">
     Locations
