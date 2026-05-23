@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nice store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-100 text-slate-900">
+    <header class="bg-slate-900 text-white p-6 shadow-md">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h1 class="text-3xl font-bold">Nice Store</h1>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button class="nav-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition" data-target="shop">Shop</button>
+          <button class="nav-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition" data-target="login">Login</button>
+          <button class="nav-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition" data-target="signup">Signup</button>
+          <button class="nav-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition" data-target="payment">Payment</button>
+        </div>
+        <div class="bg-slate-800 text-slate-100 px-4 py-3 rounded-lg shadow-sm">
+          <p class="text-sm">Cart total:</p>
+          <p class="text-xl font-semibold" id="cartTotal">$0.00</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <section id="shop" class="page-section hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+          <h2 class="text-xl font-semibold mb-2">Classic Shirt</h2>
+          <p class="text-slate-600 mb-4">Price: <span class="font-semibold">$25</span></p>
+          <button class="buy-btn w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition" data-name="Classic Shirt" data-price="25">
+            Add to Cart
+          </button>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+          <h2 class="text-xl font-semibold mb-2">Modern Sneakers</h2>
+          <p class="text-slate-600 mb-4">Price: <span class="font-semibold">$45</span></p>
+          <button class="buy-btn w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition" data-name="Modern Sneakers" data-price="45">
+            Add to Cart
+          </button>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+          <h2 class="text-xl font-semibold mb-2">Sporty Jacket</h2>
+          <p class="text-slate-600 mb-4">Price: <span class="font-semibold">$65</span></p>
+          <button class="buy-btn w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition" data-name="Sporty Jacket" data-price="65">
+            Add to Cart
+          </button>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+          <h2 class="text-xl font-semibold mb-2">Casual Shorts</h2>
+          <p class="text-slate-600 mb-4">Price: <span class="font-semibold">$30</span></p>
+          <button class="buy-btn w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition" data-name="Casual Shorts" data-price="30">
+            Add to Cart
+          </button>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+          <h2 class="text-xl font-semibold mb-2">Comfort Jeans</h2>
+          <p class="text-slate-600 mb-4">Price: <span class="font-semibold">$40</span></p>
+          <button class="buy-btn w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition" data-name="Comfort Jeans" data-price="40">
+            Add to Cart
+          </button>
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm border border-slate-200">
+          <h2 class="text-xl font-semibold mb-2">Summer Hat</h2>
+          <p class="text-slate-600 mb-4">Price: <span class="font-semibold">$15</span></p>
+          <button class="buy-btn w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition" data-name="Summer Hat" data-price="15">
+            Add to Cart
+          </button>
+        </article>
+      </section>
+
+      <section id="login" class="page-section hidden">
+        <div class="rounded-2xl bg-white p-8 shadow-sm border border-slate-200 max-w-2xl mx-auto">
+          <h2 class="text-2xl font-semibold mb-4">Login</h2>
+          <form id="loginForm" class="space-y-4">
+            <label class="block">
+              <span class="text-slate-700">Email</span>
+              <input type="email" id="loginEmail" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <label class="block">
+              <span class="text-slate-700">Password</span>
+              <input type="password" id="loginPassword" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <button type="submit" class="w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition">Login</button>
+          </form>
+          <p id="loginMessage" class="mt-4 text-sm"></p>
+        </div>
+      </section>
+
+      <section id="signup" class="page-section hidden">
+        <div class="rounded-2xl bg-white p-8 shadow-sm border border-slate-200 max-w-2xl mx-auto">
+          <h2 class="text-2xl font-semibold mb-4">Signup</h2>
+          <form id="signupForm" class="space-y-4">
+            <label class="block">
+              <span class="text-slate-700">Full Name</span>
+              <input type="text" id="signupName" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <label class="block">
+              <span class="text-slate-700">Email</span>
+              <input type="email" id="signupEmail" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <label class="block">
+              <span class="text-slate-700">Password</span>
+              <input type="password" id="signupPassword" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <label class="block">
+              <span class="text-slate-700">Confirm Password</span>
+              <input type="password" id="signupPasswordConfirm" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <button type="submit" class="w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition">Signup</button>
+          </form>
+          <p id="signupMessage" class="mt-4 text-sm"></p>
+          <p class="mt-4 text-sm">Already have an account? <button type="button" id="gotoLoginFromSignup" class="font-semibold text-slate-900 hover:underline">Login</button></p>
+        </div>
+      </section>
+
+      <section id="payment" class="page-section hidden">
+        <div class="rounded-2xl bg-white p-8 shadow-sm border border-slate-200 max-w-2xl mx-auto">
+          <h2 class="text-2xl font-semibold mb-4">Payment</h2>
+          <form id="paymentForm" class="space-y-4">
+            <label class="block">
+              <span class="text-slate-700">Amount</span>
+              <input type="number" id="paymentAmount" value="0" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <label class="block">
+              <span class="text-slate-700">Card Number</span>
+              <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+            </label>
+            <div class="grid grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-slate-700">Expiry</span>
+                <input type="text" id="cardExpiry" placeholder="MM/YY" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+              </label>
+              <label class="block">
+                <span class="text-slate-700">CVV</span>
+                <input type="text" id="cardCvv" maxlength="4" placeholder="123" class="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-400" required />
+              </label>
+            </div>
+            <button type="submit" class="w-full rounded-xl bg-slate-900 text-white py-3 hover:bg-slate-700 transition">Pay</button>
+          </form>
+          <p id="paymentMessage" class="mt-4 text-sm"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 py-6">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+      </div>
+    </footer>
+
+    <script>
+      const cartTotalEl = document.getElementById('cartTotal');
+      let cartTotal = 0;
+      const users = {};
+      let currentUser = null;
+
+      const sections = document.querySelectorAll('.page-section');
+      const navButtons = document.querySelectorAll('.nav-btn');
+
+      function showSection(sectionId) {
+        sections.forEach(section => {
+          section.classList.toggle('hidden', section.id !== sectionId);
+        });
+        navButtons.forEach(button => {
+          button.classList.toggle('bg-slate-700', button.dataset.target === sectionId);
+          button.classList.toggle('bg-slate-800', button.dataset.target !== sectionId);
+        });
+        if (sectionId === 'payment') {
+          document.getElementById('paymentAmount').value = cartTotal.toFixed(2);
+        }
+      }
+
+      navButtons.forEach(button => {
+        button.addEventListener('click', () => showSection(button.dataset.target));
+      });
+
+      const gotoLoginFromSignupBtn = document.getElementById('gotoLoginFromSignup');
+      if (gotoLoginFromSignupBtn) {
+        gotoLoginFromSignupBtn.addEventListener('click', () => showSection('login'));
+      }
+
+      showSection('signup');
+
+      document.querySelectorAll('.buy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const price = Number(button.dataset.price);
+          const name = button.dataset.name;
+          cartTotal += price;
+          cartTotalEl.textContent = `$${cartTotal.toFixed(2)}`;
+          button.textContent = 'Added';
+          button.disabled = true;
+          button.classList.add('bg-slate-500', 'cursor-not-allowed');
+          alert(`${name} added to cart for $${price}`);
+        });
+      });
+
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+      const paymentForm = document.getElementById('paymentForm');
+
+      loginForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+        const password = document.getElementById('loginPassword').value;
+        const loginMessage = document.getElementById('loginMessage');
+
+        if (!users[email] || users[email].password !== password) {
+          loginMessage.textContent = 'Invalid email or password. Please try again.';
+          loginMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+
+        currentUser = email;
+        loginMessage.textContent = `Welcome back, ${users[email].name}! You are logged in.`;
+        loginMessage.className = 'mt-4 text-sm text-green-600';
+        loginForm.reset();
+      });
+
+      signupForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const name = document.getElementById('signupName').value.trim();
+        const email = document.getElementById('signupEmail').value.trim().toLowerCase();
+        const password = document.getElementById('signupPassword').value;
+        const passwordConfirm = document.getElementById('signupPasswordConfirm').value;
+        const signupMessage = document.getElementById('signupMessage');
+
+        if (password !== passwordConfirm) {
+          signupMessage.textContent = 'Passwords do not match. Please try again.';
+          signupMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+        if (users[email]) {
+          signupMessage.textContent = 'This email is already registered. Please login.';
+          signupMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+
+        users[email] = { name, password };
+        currentUser = email;
+        signupMessage.textContent = `Account created successfully. Welcome, ${name}!`;
+        signupMessage.className = 'mt-4 text-sm text-green-600';
+        signupForm.reset();
+        showSection('shop');
+      });
+
+      paymentForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const amount = Number(document.getElementById('paymentAmount').value);
+        const cardNumber = document.getElementById('cardNumber').value.replace(/\D/g, '');
+        const expiry = document.getElementById('cardExpiry').value.trim();
+        const cvv = document.getElementById('cardCvv').value.trim();
+        const paymentMessage = document.getElementById('paymentMessage');
+
+        if (!amount || amount <= 0) {
+          paymentMessage.textContent = 'Enter a valid payment amount.';
+          paymentMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+        if (!/^\d{16}$/.test(cardNumber)) {
+          paymentMessage.textContent = 'Enter a valid 16-digit card number.';
+          paymentMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+        if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+          paymentMessage.textContent = 'Enter expiry in MM/YY format.';
+          paymentMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+        if (!/^\d{3,4}$/.test(cvv)) {
+          paymentMessage.textContent = 'Enter a valid CVV.';
+          paymentMessage.className = 'mt-4 text-sm text-red-600';
+          return;
+        }
+
+        paymentMessage.textContent = `Payment of $${amount.toFixed(2)} completed successfully.`;
+        paymentMessage.className = 'mt-4 text-sm text-green-600';
+        paymentForm.reset();
+        document.getElementById('paymentAmount').value = cartTotal.toFixed(2);
+      });
+    </script>
+  </body>
+</html>
